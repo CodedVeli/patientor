@@ -11,7 +11,7 @@ export enum Gender {
 }
 
 export interface Patient {
-  id: string;
+  _id: string;
   name: string;
   occupation: string;
   gender: Gender;

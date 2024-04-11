@@ -47,6 +47,8 @@ const PatientListPage = ({ patients, setPatients } : Props ) => {
     }
   };
 
+  console.log('All:',patients);
+
   return (
     <div className="App">
       <Box>
@@ -64,8 +66,8 @@ const PatientListPage = ({ patients, setPatients } : Props ) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {Object.values(patients).map((patient: Patient) => (
-            <TableRow key={patient.id}>
+          {Object.values(patients).map((patient: Patient, index: number) => (
+            <TableRow key={index}>
               <TableCell>{patient.name}</TableCell>
               <TableCell>{patient.gender}</TableCell>
               <TableCell>{patient.occupation}</TableCell>

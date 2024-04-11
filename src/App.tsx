@@ -21,6 +21,7 @@ const App = () => {
     };
     void fetchPatientList();
   }, []);
+  console.log('app:',patients.allPatients);
   
   return (
     <div className="App">
